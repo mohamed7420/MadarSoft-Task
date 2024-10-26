@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TodoShimmerView" customModule="MadarSoftTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oF-Kn-GSR">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="852" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-T8-Eme">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1350"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="o54-S4-9Gg">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1HH-B2-eQR">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NK-Xr-kVa">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="J9Z-xK-LsS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-Lg-Ecd">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdF-mF-UPy">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3gt-me-uAl">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njg-vI-zs9">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="Way-HY-ALl"/>
+                                                        <constraint firstAttribute="width" secondItem="Njg-vI-zs9" secondAttribute="height" multiplier="1:1" id="baJ-Kx-mgQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="Z1M-PJ-zEh"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iXH-xE-Vee">
+                                    <rect key="frame" x="0.0" y="80" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gds-i3-AO6">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayk-8H-gS5">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="1Ye-qX-1lv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kGT-3X-wND">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPv-q1-Cke">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-UA-iR2">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-eP-VHN">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="L11-J3-C6Y"/>
+                                                        <constraint firstAttribute="width" secondItem="ObI-eP-VHN" secondAttribute="height" multiplier="1:1" id="wsD-FS-jBL"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="3kH-lf-sxT"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yDJ-Lg-RrQ">
+                                    <rect key="frame" x="0.0" y="160" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-Va-mSo">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6U-gx-7kl">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="K0O-Ik-Byk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y5n-Dy-FQa">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-Fg-m9w">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1bO-aC-l09">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUy-ig-hyd">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="Nzu-QC-Dnc"/>
+                                                        <constraint firstAttribute="width" secondItem="CUy-ig-hyd" secondAttribute="height" multiplier="1:1" id="ikd-JT-fxx"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="DV6-yL-XGg"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mi8-0o-obw">
+                                    <rect key="frame" x="0.0" y="240" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wn4-p0-kZJ">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-3g-Q5f">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="lZh-1m-PKe"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f2I-fo-X31">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJp-YP-nJC">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IBR-Ht-l4W">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q01-i8-Et1">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="803-ur-2x2"/>
+                                                        <constraint firstAttribute="width" secondItem="q01-i8-Et1" secondAttribute="height" multiplier="1:1" id="ngc-RN-mCV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="adx-Yf-edK"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-Ut-VpI">
+                                    <rect key="frame" x="0.0" y="320" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-KO-GIx">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIF-PD-br4">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="hxH-px-UFO"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l88-G9-mka">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-fY-yh6">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hm9-Oc-lU0">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar6-5f-jho">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="9vC-3P-xQK"/>
+                                                        <constraint firstAttribute="width" secondItem="Ar6-5f-jho" secondAttribute="height" multiplier="1:1" id="CJj-Bs-drJ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="x5Z-xL-iMf"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="346-gu-jgp">
+                                    <rect key="frame" x="0.0" y="400" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-6S-X5J">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZ4-7C-Asy">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="uHF-QF-X3r"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aki-35-aV2">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE8-dM-eOy">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fv0-Id-QH1">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-ap-5Sw">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0Rf-ap-5Sw" secondAttribute="height" multiplier="1:1" id="0gf-he-dwF"/>
+                                                        <constraint firstAttribute="width" constant="10" id="VO6-G1-CYF"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="QwM-yw-fgp"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bqD-fD-fJS">
+                                    <rect key="frame" x="0.0" y="480" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iMh-f7-Tah">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-kW-e7H">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="XI2-Wl-4Gn"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JJm-nQ-umE">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBz-IO-HO6">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YnR-i8-O6F">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zX5-zA-N8r">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zX5-zA-N8r" secondAttribute="height" multiplier="1:1" id="Hja-do-EkF"/>
+                                                        <constraint firstAttribute="width" constant="10" id="axm-lP-vBZ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="CqA-Pd-Hbi"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tw7-l0-GP5">
+                                    <rect key="frame" x="0.0" y="560" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-Pk-Nm3">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-an-phK">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="ari-r6-AGD"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWr-4L-7by">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-33-925">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-zM-hYT">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7F-MY-fYA">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="4V1-4d-5fI"/>
+                                                        <constraint firstAttribute="width" secondItem="A7F-MY-fYA" secondAttribute="height" multiplier="1:1" id="KH9-rA-RvE"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="MvA-HT-eMp"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Ey-fZZ">
+                                    <rect key="frame" x="0.0" y="640" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9aO-sq-TzD">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-Wb-uNa">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="f4A-Ll-Caj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H95-np-JmQ">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-2S-nsV">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-1E-B7d">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-ex-slZ">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="URN-KI-EIb"/>
+                                                        <constraint firstAttribute="width" secondItem="mBP-ex-slZ" secondAttribute="height" multiplier="1:1" id="mlY-HW-kGM"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="IZ8-O5-OLf"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nyi-bi-PlS">
+                                    <rect key="frame" x="0.0" y="720" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tNv-o0-pQZ">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qII-S2-kfi">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Twd-ha-Hg4"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-AW-We2">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cg-dc-ui4">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u9b-SX-qeZ">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og9-o7-dGm">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Og9-o7-dGm" secondAttribute="height" multiplier="1:1" id="bT4-D7-FIC"/>
+                                                        <constraint firstAttribute="width" constant="10" id="uuC-im-zt9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="byd-UF-bgf"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-Fb-MfM">
+                                    <rect key="frame" x="0.0" y="800" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="94P-V9-rii">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz9-vh-sBs">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="arc-Al-dRA"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aGB-JH-6Rf">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqA-KO-Z2o">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-3Z-bDd">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOE-Og-kB1">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="QrU-Xb-fFs"/>
+                                                        <constraint firstAttribute="width" secondItem="VOE-Og-kB1" secondAttribute="height" multiplier="1:1" id="RMj-qt-bJT"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="WLY-eV-kic"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E7E-Qv-nkr">
+                                    <rect key="frame" x="0.0" y="880" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KwG-3P-CXY">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMP-K0-2bm">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="rUT-ie-LRI"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-0K-ryt">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N0-is-fqq">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XHP-wC-SMK">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ee8-4C-cKn">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Ee8-4C-cKn" secondAttribute="height" multiplier="1:1" id="631-Ia-LVO"/>
+                                                        <constraint firstAttribute="width" constant="10" id="pIt-9m-Gw9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="pxn-9i-wzG"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lI8-yz-ryd">
+                                    <rect key="frame" x="0.0" y="960" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lre-7b-wkb">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeo-3t-aYW">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="MNz-yC-0O4"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-fe-7W0">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXj-LR-uza">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-rf-lBs">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5GW-VI-FwT">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="5GW-VI-FwT" secondAttribute="height" multiplier="1:1" id="P2x-P9-nzp"/>
+                                                        <constraint firstAttribute="width" constant="10" id="RF7-GE-5rY"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="eVf-ob-q7A"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g81-bE-HaG">
+                                    <rect key="frame" x="0.0" y="1040" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Exo-16-lXU">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GM-bL-8fc">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="v9r-Hb-GW0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-Ly-7up">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-2u-CWL">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-zY-ewa">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-Kh-Qt4">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="hDE-kH-cjd"/>
+                                                        <constraint firstAttribute="width" secondItem="oqa-Kh-Qt4" secondAttribute="height" multiplier="1:1" id="s5R-3Q-dI3"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="MB9-CX-WNi"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bPY-1K-epV">
+                                    <rect key="frame" x="0.0" y="1120" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wZp-EH-l6c">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-yG-Dtc">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="80K-hh-Swu"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BZF-D7-P6M">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoY-QP-DPD">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zPU-cw-r17">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-mE-eNH">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="g9s-Vf-7Js"/>
+                                                        <constraint firstAttribute="width" secondItem="DR0-mE-eNH" secondAttribute="height" multiplier="1:1" id="qCd-DE-uQ0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="wVj-r9-dTm"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zVy-dj-zK3">
+                                    <rect key="frame" x="0.0" y="1200" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-Cn-U6q">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxG-IT-eVD">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="VjD-S8-lU6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-2B-0T7">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-VE-oj7">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qUH-lc-fNI">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-39-AfN">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="0Lj-wO-1vU"/>
+                                                        <constraint firstAttribute="width" secondItem="Wrx-39-AfN" secondAttribute="height" multiplier="1:1" id="b9a-hn-fd9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="RsD-t4-Ecw"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rUd-Iw-93N">
+                                    <rect key="frame" x="0.0" y="1280" width="393" height="70"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LH1-Fv-4W5">
+                                            <rect key="frame" x="10" y="10" width="40" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-dq-yhM">
+                                                    <rect key="frame" x="0.0" y="10" width="40" height="30"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="oD5-A8-T3w"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="0.0" bottom="10" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dA2-C1-KbV">
+                                            <rect key="frame" x="55" y="10" width="313" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-Lm-RJH">
+                                                    <rect key="frame" x="8" y="20" width="297" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tof-q7-Vye">
+                                            <rect key="frame" x="373" y="10" width="10" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQR-s1-A5S">
+                                                    <rect key="frame" x="0.0" y="20" width="10" height="10"/>
+                                                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="sQR-s1-A5S" secondAttribute="height" multiplier="1:1" id="HAh-dS-JGv"/>
+                                                        <constraint firstAttribute="width" constant="10" id="YIK-BD-lRn"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="V18-Zx-YXZ"/>
+                                    </constraints>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FKQ-T8-Eme" firstAttribute="leading" secondItem="8oF-Kn-GSR" secondAttribute="leading" id="Avd-Fy-X2Y"/>
+                        <constraint firstItem="FKQ-T8-Eme" firstAttribute="trailing" secondItem="8oF-Kn-GSR" secondAttribute="trailing" id="H4l-pw-Sov"/>
+                        <constraint firstItem="FKQ-T8-Eme" firstAttribute="bottom" secondItem="8oF-Kn-GSR" secondAttribute="bottom" id="cDN-Sl-qUL"/>
+                        <constraint firstItem="FKQ-T8-Eme" firstAttribute="top" secondItem="8oF-Kn-GSR" secondAttribute="top" id="fCz-AN-d7a"/>
+                        <constraint firstItem="FKQ-T8-Eme" firstAttribute="width" secondItem="8oF-Kn-GSR" secondAttribute="width" id="i3W-aE-hEU"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="W5L-vx-HeV"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="6Ae-wV-4gm"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8oF-Kn-GSR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="INm-yV-Cl3"/>
+                <constraint firstItem="8oF-Kn-GSR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="J6V-U4-HSa"/>
+                <constraint firstItem="8oF-Kn-GSR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iDy-Yt-QAn"/>
+                <constraint firstAttribute="bottom" secondItem="8oF-Kn-GSR" secondAttribute="bottom" id="tde-Yc-c1p"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="81.679389312977094" y="-11.267605633802818"/>
+        </view>
+    </objects>
+</document>
