@@ -59,7 +59,7 @@ Follow these steps to ensure the README file is complete and accurate for your p
 
 Clone the Repository and Project Information:
 
-In the Setup section, replace the GitHub link https://github.com/yourusername/MadarSoftTask.git with your actual GitHub repository URL.
+In the Setup section, replace the GitHub link https://github.com/mohamed7420/MadarSoftTask.git with your actual GitHub repository URL.
 Customize the Project Information section with any unique details, such as specific frameworks, patterns, or libraries you used.
 Verify Setup Instructions:
 
@@ -73,14 +73,6 @@ Testing Instructions:
 
 Confirm that the Run Tests steps are accurate by opening the project in Xcode and running Cmd + U.
 If there are integration tests or UI tests in addition to unit tests, mention those separately and provide specific instructions.
-Provide Example Usage:
-
-Double-check that the steps under Example Usage match your app's interface. If there are extra steps, such as creating an account or navigating to different sections, include them here.
-Add screenshots if desired, as they can help clarify the steps visually.
-Dependencies:
-
-Verify all dependencies are mentioned. If there are additional dependencies not listed in the initial README (e.g., Alamofire, Kingfisher, etc.), add them under Dependencies.
-Licensing:
 
 <img src="https://github.com/user-attachments/assets/02bfe752-0b04-4354-8223-30e83de11d7e" alt="Simulator Screenshot - iPhone 16 Pro" width="40%" />
 <img src="https://github.com/user-attachments/assets/d8627926-c599-414b-808e-76fd7670284e" alt="Simulator Screenshot - iPhone 16 Pro" width="40%"/>
