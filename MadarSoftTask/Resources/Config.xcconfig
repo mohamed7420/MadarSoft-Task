@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  MadarSoftTask
+//
+//  Created by Mohamed Osama on 24/10/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_URL = https:\/\/jsonplaceholder.typicode.com\/todos
