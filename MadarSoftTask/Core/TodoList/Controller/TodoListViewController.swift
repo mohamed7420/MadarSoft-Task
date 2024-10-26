@@ -206,7 +206,7 @@ extension TodoListViewController: AddNewTodoDelegate, UISearchResultsUpdating {
         
         DispatchQueue.main.async {[weak self] in
             guard let self else { return }
-            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredVertically, animated: true)
         }
     }
     

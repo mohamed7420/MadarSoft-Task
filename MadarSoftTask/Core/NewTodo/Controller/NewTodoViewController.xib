@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1LD-hC-QHM">
-                    <rect key="frame" x="19.666666666666657" y="118" width="353.66666666666674" height="130"/>
+                    <rect key="frame" x="19.666666666666657" y="79" width="353.66666666666674" height="130"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add New Todo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OO3-qh-f2b">
                             <rect key="frame" x="0.0" y="0.0" width="353.66666666666669" height="55"/>
@@ -60,7 +60,7 @@
             <constraints>
                 <constraint firstItem="1LD-hC-QHM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="1Hk-Jv-Adg"/>
                 <constraint firstItem="1LD-hC-QHM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="26v-jQ-mWP"/>
-                <constraint firstItem="1LD-hC-QHM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZiW-bg-hF5"/>
+                <constraint firstItem="1LD-hC-QHM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Uxp-RU-mCa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="300" y="-104.22535211267606"/>
