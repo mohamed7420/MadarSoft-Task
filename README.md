@@ -82,6 +82,12 @@ Dependencies:
 Verify all dependencies are mentioned. If there are additional dependencies not listed in the initial README (e.g., Alamofire, Kingfisher, etc.), add them under Dependencies.
 Licensing:
 
+<img src="https://github.com/user-attachments/assets/02bfe752-0b04-4354-8223-30e83de11d7e" alt="Simulator Screenshot - iPhone 16 Pro" width="40%" />
+<img src="https://github.com/user-attachments/assets/d8627926-c599-414b-808e-76fd7670284e" alt="Simulator Screenshot - iPhone 16 Pro" width="40%"/>
+<img src="https://github.com/user-attachments/assets/ac358de7-d5fd-4e2f-b992-a3858058b47d" alt="Simulator Screenshot" width="40%"/>
+
+
+
 If you’re using MIT License, ensure a LICENSE file exists with the appropriate text. Otherwise, update the License section with details on your specific licensing.
 Final Touches:
 
