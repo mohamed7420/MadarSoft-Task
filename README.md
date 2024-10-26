@@ -21,7 +21,7 @@ MadarSoftTask is a simple To-Do list application built with Swift, utilizing `Co
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/MadarSoftTask.git
+   git clone https://github.com/mohamed7420/MadarSoftTask.git
    cd MadarSoftTask
 open MadarSoftTask.xcodeproj
 
