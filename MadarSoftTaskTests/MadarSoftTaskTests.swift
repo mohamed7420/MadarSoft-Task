@@ -6,31 +6,118 @@
 //
 
 import XCTest
+import CoreData
+import Combine
 @testable import MadarSoftTask
 
 final class MadarSoftTaskTests: XCTestCase {
-
+    
+    var viewModel: TodoListViewModel!
+    var mockNetworkManager: MockNetworkManager!
+    var mockSoundManager: MockSoundManager!
+    var mockContext: NSManagedObjectContext!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        
+        mockNetworkManager = MockNetworkManager()
+        mockSoundManager = MockSoundManager()
+        mockContext = setUpInMemoryManagedObjectContext()
+        
+        viewModel = TodoListViewModel(context: mockContext,
+                                      soundManager: mockSoundManager,
+                                      networkManager: mockNetworkManager)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
+        mockNetworkManager = nil
+        mockSoundManager = nil
+        mockContext = nil
+        try super.tearDownWithError()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        
+    private func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
+        let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        try! persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType, configurationName: nil, at: nil, options: nil)
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = persistentStoreCoordinator
+        return context
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        
+    func testLoadAllTodosSuccess() async {
+        mockNetworkManager.mockTodos = [Todo(userId: 1, id: 1, title: "Sample Todo", completed: false)]
+        
+        await viewModel.loadAllTodos()
+        
+        XCTAssertEqual(viewModel.todos.count, 1)
+        XCTAssertEqual(viewModel.todos.first?.title, "Sample Todo")
+        XCTAssertFalse(viewModel.isLoading)
+    }
+    
+    func testFilterTodosWithSearchText() {
+        viewModel.todos = [
+            Todo(userId: 1, id: 1, title: "First Todo", completed: false),
+            Todo(userId: 1, id: 2, title: "Second Todo", completed: false)
+        ]
+        
+        let filteredTodos = viewModel.filterTodos("First")
+        
+        XCTAssertEqual(filteredTodos.count, 1)
+        XCTAssertEqual(filteredTodos.first?.title, "First Todo")
+    }
+    
+    func testAddNewTodo() {
+        let newTodo = Todo(userId: 1, id: 3, title: "New Todo", completed: false)
+        
+        viewModel.addNewTodo(newTodo)
+        
+        XCTAssertEqual(viewModel.todos.count, 1)
+        XCTAssertEqual(viewModel.todos.first?.title, "New Todo")
+    }
+    
+    func testDeleteTodo() {
+        viewModel.todos = [
+            Todo(userId: 1, id: 1, title: "Sample Todo", completed: false)
+        ]
+        
+        viewModel.deleteTodo(at: 0)
+        XCTAssertEqual(viewModel.todos.count, 0)
+    }
+    
+    func testUpdateCompleteTodo() {
+        let todo = Todo(userId: 1, id: 1, title: "Sample Todo", completed: false)
+        viewModel.todos = [todo]
+        
+        viewModel.updateCompleteTodo(at: 0)
+        
+        XCTAssertTrue(viewModel.todos.first!.completed)
+        XCTAssertTrue(mockSoundManager.isSoundPlayed) // Ensures sound played
+    }
+        
+    class MockNetworkManager: NetworkServiceProtocol {
+        var mockTodos: [Todo] = []
+        var isNetworkConnected: Bool = true
+        
+        func isConnectedToNetwork() -> Bool {
+            return isNetworkConnected
+        }
+        
+        func fetchData<T: Codable>(from urlString: String) async throws -> T {
+            if T.self == [Todo].self {
+                return mockTodos as! T
+            } else {
+                throw NSError(domain: "Invalid data type", code: -1, userInfo: nil)
+            }
         }
     }
-
+    
+    class MockSoundManager: SoundManager {
+        var isSoundPlayed = false
+        override func play() {
+            isSoundPlayed = true
+        }
+    }
 }
+
