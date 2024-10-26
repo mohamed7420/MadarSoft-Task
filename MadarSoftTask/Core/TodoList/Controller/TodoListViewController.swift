@@ -45,17 +45,20 @@ class TodoListViewController: UIViewController {
         configureDataSource()
         setupSearchController()
         bindSearchTextPublisher()
-        
-        if viewModel.hasTodosInCoreData() {
-            viewModel.fetchTodos()
-        } else {
-            Task { await viewModel.loadAllTodos() }
-        }
+        loadTodos()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationItem.rightBarButtonItem = topTrailingBarButton
+    }
+    
+    private func loadTodos() {
+        if viewModel.hasTodosInCoreData() {
+            viewModel.fetchTodos()
+        } else {
+            Task { await viewModel.loadAllTodos() }
+        }
     }
     
     private func setupViews() {
@@ -86,9 +89,10 @@ class TodoListViewController: UIViewController {
     
     private func performSearch(with searchText: String) {
         if searchText.isEmpty {
-            snapshot(todos: viewModel.todos)
+            loadTodos()
         } else {
             let filteredTodos = viewModel.filterTodos(searchText)
+            viewModel.todos = filteredTodos
             snapshot(todos: filteredTodos)
         }
     }
@@ -173,9 +177,7 @@ extension TodoListViewController: UICollectionViewDelegate {
      }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !searchController.isActive {
             viewModel.updateCompleteTodo(at: indexPath.row)
-        }
     }
     
     private func presentAddNewTodoViewController() {
