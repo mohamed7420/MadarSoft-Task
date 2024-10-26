@@ -21,6 +21,7 @@ class NewTodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        handleKeyboardAppearance()
     }
 
     private func updateViews() {
@@ -31,6 +32,14 @@ class NewTodoViewController: UIViewController {
         view.clipsToBounds = true
     }
     
+    private func handleKeyboardAppearance() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     @IBAction func didSaveButtonTapped(_ sender: UIButton) {
         guard let title = titleTextField.text, !title.isEmpty else { return }
